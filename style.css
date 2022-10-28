@@ -1,0 +1,237 @@
+a* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+body {
+  width: 99%;
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 212, 255, 1) 27%,
+    rgb(252, 86, 86) 30%,
+    rgba(255, 255, 255, 1) 35%,
+    rgba(231, 232, 241, 1) 67%,
+    rgb(255, 75, 75) 72%,
+    rgb(108, 247, 93) 78%
+  );
+  background-repeat: no-repeat;
+}
+.container .question {
+  padding: 10px;
+  width: 70%;
+  margin: 0 auto;
+  background: rgba(22, 0, 144, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(22, 0, 144, 1);
+}
+.container .question h2 {
+  color: rgb(255, 217, 0);
+  font-family: sans-serif;
+  margin: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+.container .question img {
+  width: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid rgb(0, 0, 0);
+}
+.container .answers ul {
+  padding: 0;
+  list-style: none;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+}
+.container .answers .lilar {
+  width: 50%;
+  padding: 7px;
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.44);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transition: 0.7s;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+}
+.container .answers .lilar:hover {
+  transform: scale(1.2);
+  background: rgba(0, 0, 0, 0.71);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+.container .result {
+  padding: 0;
+  margin: 0 auto;
+  box-sizing: border-box;
+  width: 30px;
+}
+.container .result span {
+  display: flex;
+}
+.container .result span {
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 50px;
+  font-weight: bold;
+  color: rgb(255, 49, 49);
+  text-shadow: 2px 2px blue;
+  text-shadow: 1px 1px 2px rgb(30, 255, 0), 0 0 1em blue, 0 0 0.2em blue;
+}
+.btn {
+  display: none;
+  width: 52%;
+  margin: 0 auto;
+  padding: 5px;
+  background: rgb(25, 0, 255);
+  color: #fff;
+  font-size: 25px;
+  border-radius: 16px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 1s;
+}
+.btn:hover {
+  background: rgb(0, 0, 83);
+}
+.container {
+  /* display: none; */
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+}
+#cup {
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  background: rgba(22, 0, 144, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(22, 0, 144, 1);
+}
+#cup button {
+  width: 50%;
+  padding: 15px;
+  font-size: 20px;
+  margin: auto;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transition: 0.7s;
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-top: 70px;
+}
+#cup button:hover {
+  transform: rotate(360deg);
+  background: rgba(0, 0, 0, 0.71);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 3px solid rgba(0, 0, 0, 1);
+}
+@keyframes growProgressBar {
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+div[role="progressbar"] {
+  margin: 0 auto;
+  border: 2px solid rgb(4, 0, 255);
+  --size: 12rem;
+  --fg: rgb(9, 73, 0);
+  --bg: rgb(109, 255, 116);
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      white 80%,
+      transparent 0 99.9%,
+      white 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[role="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+.bg-image {
+  background-image: url("../img/ico.png");
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-text {
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
